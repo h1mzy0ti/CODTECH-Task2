@@ -1,62 +1,44 @@
-# Simple Flask RESTful API
+# BASIC AUTHENTICATION SYSTEM
+Name: HIMJYOTI TALUKDAR
+Company: CODTECH IT SOLUTIONS
+ID: CT6WDS528
+Domain: BACKEND DEVELOPMENT
+Duration: June to August 2024
 
-## Objective
+## Flask User Authentication System
 
-The objective of this project is to create a simple RESTful API using Flask (Python) that allows users to manage a collection of movies. The API supports basic CRUD (Create, Read, Update, Delete) operations, as well as a filtering mechanism to retrieve movies based on their genre. This project serves as an introductory exercise in understanding how to build and manage RESTful APIs using Flask.
+## Overview of the project
 
-## Key Activities
+The objective of this project is to create a basic user authentication system using Flask, a lightweight web framework for Python. The system allows users to register, log in, and access a protected home page. It also ensures that user passwords are securely stored using bcrypt hashing, and user sessions are managed to keep track of logged-in users.
 
-- **Setting Up the Flask Environment**:
-  - Install Flask and set up a basic Flask application.
-  - Configure routing and request handling.
+## Key Features
 
-- **Implementing CRUD Operations**:
-  - **GET**: Retrieve all movies or a specific movie by ID.
-  - **POST**: Add a new movie to the collection.
-  - **PUT**: Update details of an existing movie by its ID.
-  - **DELETE**: Remove a movie from the collection by its ID.
+- **User Registration**: Allows new users to create an account with a unique username and password.
+- **User Login**: Users can log in using their registered credentials.
+- **Session Management**: Once logged in, users are remembered across pages using session management.
+- **Password Hashing**: Passwords are stored securely using bcrypt, a hashing algorithm designed for secure password storage.
+- **Protected Routes**: Only authenticated users can access certain routes, like the home page.
+- **User Logout**: Users can securely log out, clearing their session.
 
-- **Filtering Movies by Genre**:
-  - Implement a filter to retrieve movies based on their genre.
+## Technology Stack
 
-- **Running and Testing the API**:
-  - Run the Flask application on a local server.
-  - Test the API endpoints using tools like Postman or cURL.
-
-## Technology Used
-
-- **Python**: The primary programming language used for this project.
-- **Flask**: A lightweight web framework used to create the RESTful API.
-- **JSON**: Data format used for communication between the client and the server.
+- **Python**: The core programming language used to build the application.
+- **Flask**: A lightweight web framework for Python, used to handle routing, templates, and session management.
+- **Flask-Bcrypt**: A Flask extension that integrates the bcrypt hashing algorithm for secure password storage.
+- **HTML**: For creating the front-end templates of the registration, login, and home pages.
+- **CSS**: (optional) For styling the front-end templates.
 
 ## Project Structure
 
-/simple-flask-rest-api
-│
-├── app.py # Main application file containing the API logic
-├── requirements.txt # List of required Python packages
-└── README.md # Project documentation (this file)
+/flask_auth_system
+/templates
+login.html # HTML template for the login page
+register.html # HTML template for the registration page
+home.html # HTML template for the home page (protected)
+app.py # Main Flask application script
 
-##API Endpoints
-- GET /movies - Retrieve all movies.
-- GET /movies/<int:movie_id> - Retrieve a movie by its ID.
-- POST /movies - Add a new movie (requires a JSON body).
-- PUT /movies/<int:movie_id> - Update an existing movie (requires a JSON body).
-- DELETE /movies/<int:movie_id> - Delete a movie by its ID.
-- GET /movies/genre/<string:genre> - Retrieve movies by genre.
-
-## Example JSON Requests
-
-- POST /movies:
-{
-    "title": "Interstellar",
-    "director": "Christopher Nolan",
-    "genre": "Sci-Fi"
-}
-
-- PUT /movies/2:
-{
-    "title": "The Godfather (Updated Edition)",
-    "director": "Francis Ford Coppola",
-    "genre": "Crime"
-}
+## Usage
+- Register: Create a new user account by visiting /register.
+- Login: Log in using your registered credentials by visiting /login.
+- Home: Access the protected home page by visiting /home (after logging in).
+- Logout: Log out from the application by visiting /logout.
