@@ -1,9 +1,9 @@
 # BASIC AUTHENTICATION SYSTEM
-**Name:** HIMJYOTI TALUKDAR
-**Company:** CODTECH IT SOLUTIONS
-**ID:** CT6WDS528
-**Domain:** BACKEND DEVELOPMENT
-**Duration:** June to August 2024
+- Name: HIMJYOTI TALUKDAR
+- Company: CODTECH IT SOLUTIONS
+- ID: CT6WDS528
+- Domain: BACKEND DEVELOPMENT
+- Duration: June to August 2024
 
 ## Flask User Authentication System
 
